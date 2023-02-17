@@ -1,4 +1,4 @@
-const Room = require('../models/customer.model.js');
+const Customer = require('../models/customer.model.js');
 exports.getCustomers = (req, res)=>{
   Customer.find()  
         .exec((err, result) => {
@@ -34,10 +34,10 @@ exports.getCustomersByName = async (req, res) =>{
 exports.createCustomer = async (req, res)=>{
   try {
     let customer = new Customer({
-        name: req.body.name,
-        number_phone: req.body.number_phone,
-        contract: req.body.contract,
-        room_number: req.body.room_number
+      name: req.body.name,
+      number_phone: req.body.number_phone,
+      contract: req.body.contract,
+      room_number: req.body.room_number
     });
     let createdCustomer = await customer.save();
     res.status(200).json({

@@ -7,8 +7,8 @@ const roomSchema = new Schema({
     price: Number,
     status: { type: String, require: true },
     reviews:[
-        { star:{ type: Number, require: true }, Comment: String }
+        { star:{ type: Number, require: true }, comment: String }
     ],
 },{ timestamps: true } );
 
-module.exports = mongoose.model("Room", roomSchema);
+module.exports = mongoose.model("Room", roomSchema); 

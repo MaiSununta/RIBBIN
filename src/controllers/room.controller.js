@@ -42,7 +42,7 @@ exports.createRoom = async (req, res)=>{
 
 exports.updateRoom = (req, res) => {
   let room = {  //ข้อมูลใหม่
-    floor: req.body.floor,
+      floor: req.body.floor,
       room_number: req.body.room_number,
       price: req.body.price,
       status: req.body.status
